@@ -42,6 +42,9 @@ app.post("/register", async (req, res) => {
     ]);
 
 
+    if (checkResult.rows.length > 0) {
+      res.send("Email already exists. Try logging in.");
+    } else {
 
 
 
