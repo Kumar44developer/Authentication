@@ -32,7 +32,9 @@ app.get("/register", (req, res) => {
   res.render("register.ejs");
 });
 
-
+app.post("/register", async (req, res) => {
+  const email = req.body.username;
+  const password = req.body.password;
 
 
 
