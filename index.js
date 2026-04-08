@@ -36,6 +36,10 @@ app.post("/register", async (req, res) => {
   const email = req.body.username;
   const password = req.body.password;
 
+  try {
+    const checkResult = await db.query("SELECT * FROM users WHERE email = $1", [
+      email,
+    ]);
 
 
 
