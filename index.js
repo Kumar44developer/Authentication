@@ -72,7 +72,11 @@ app.post("/login", async (req, res) => {
       const user = result.rows[0];
       const storedPassword = user.password;
 
-
+      if (password === storedPassword) {
+        res.render("secrets.ejs");
+      } else {
+        res.send("Incorrect Password");
+      }
 
 
 
