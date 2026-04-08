@@ -52,7 +52,10 @@ app.post("/register", async (req, res) => {
       console.log(result);
       res.render("secrets.ejs");
     }
-
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 
 
